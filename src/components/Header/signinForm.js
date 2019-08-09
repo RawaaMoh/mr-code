@@ -27,15 +27,22 @@ export default function FormDialog() {
         <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
+            Welcome back dear friend.
           </DialogContentText>
           <TextField
             autoFocus
             margin="dense"
-            id="name"
+            id="email"
             label="Email Address"
             type="email"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="password"
+            label="Enter your password"
+            type="password"
             fullWidth
           />
         </DialogContent>
@@ -44,7 +51,7 @@ export default function FormDialog() {
             Cancel
           </Button>
           <Button onClick={handleClose} color="primary">
-            Subscribe
+            Sign in
           </Button>
         </DialogActions>
       </Dialog>
