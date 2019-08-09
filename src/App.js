@@ -16,7 +16,22 @@ import {
 function App() {
   return (
    
-
+<Box
+      display="flex"
+      flexDirection="column"
+      height="100%"
+      width="100%"
+      position="absolute"
+      justifyContent="space-between"
+    >
+      <Container>
+        <Header name={fullName} links={links} />
+        <Intro name={firstName} aboutLinkHref={links[1].href} />
+        <Projects />
+      </Container>
+      <Footer links={socialLinks} />
+    </Box>
+    
   );
 }
 
