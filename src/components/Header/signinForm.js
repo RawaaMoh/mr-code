@@ -24,7 +24,7 @@ export default function FormDialog() {
         Sign In
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">Sign In Form</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Welcome back dear friend.
