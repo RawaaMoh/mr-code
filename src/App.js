@@ -5,7 +5,9 @@ import Intro from './components/Intro';
 import Container from './components/Container';
 import Projects from './container/Projects';
 import Footer from './components/Footer';
-import Test from './components/Testing';
+import Test from './components/Test';
+// ipmort TestR from './components/TestR';
+import LinkRouter from './components/TestR';
 
 import {
   firstName,
@@ -13,6 +15,7 @@ import {
   links,
   socialLinks
 } from './constants'
+
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
         <Header name={fullName} links={links} />
         <Intro name={firstName} aboutLinkHref={links[1].href} />
         <Projects />
+        <LinkRouter />
         <Test/>
       </Container>
       <Footer links={socialLinks} />

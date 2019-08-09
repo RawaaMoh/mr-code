@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
 const images = [
   {
-    url: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjSgY-o-fXjAhVJb1AKHXANAokQjRx6BAgBEAQ&url=https%3A%2F%2Funsplash.com%2Fsearch%2Fphotos%2Ffood&psig=AOvVaw15-PcnrQ_juDvXbk6Crs5D&ust=1565445563128144',
-    title: 'Breakfast',
+    url: "/src/assets/brickwall.png",
+    // '/static/images/grid-list/breakfast.jpg',
+    title: 'Brickwall Game',
     width: '40%',
   },
   {
-    url: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjSgY-o-fXjAhVJb1AKHXANAokQjRx6BAgBEAQ&url=https%3A%2F%2Funsplash.com%2Fsearch%2Fphotos%2Ffood&psig=AOvVaw15-PcnrQ_juDvXbk6Crs5D&ust=1565445563128144',
+    url: '/static/images/grid-list/burgers.jpg',
     title: 'Burgers',
     width: '30%',
   },
   {
-    url: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjSgY-o-fXjAhVJb1AKHXANAokQjRx6BAgBEAQ&url=https%3A%2F%2Funsplash.com%2Fsearch%2Fphotos%2Ffood&psig=AOvVaw15-PcnrQ_juDvXbk6Crs5D&ust=1565445563128144',
+    url: '/static/images/grid-list/camera.jpg',
     title: 'Camera',
     width: '30%',
   },
@@ -94,7 +95,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ButtonBases() {
+ function ButtonBases() {
   const classes = useStyles();
 
   return (
@@ -132,3 +133,5 @@ export default function ButtonBases() {
     </div>
   );
 }
+
+export default ButtonBases;
