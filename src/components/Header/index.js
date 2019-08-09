@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import styles from './index.module.scss';
-import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
-
+import SignInForms from './signinForm';
+import SignUpForms from './signupForm';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -26,9 +26,9 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
   paper: {
     position: 'absolute',
-    width: 400,
+    width: 500,
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: '1px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 4),
   },
@@ -69,33 +69,18 @@ function Header({ name, links }) {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Button onClick={handleOpen} className={styles.button}>
-              <Nav.Link className={styles.NavLink} href="#signin">
+
+            {/* <Button onClick={handleOpen} className={styles.button}>
+              <Nav.Link className={styles.NavLink} eventKey={1} href="#signin">
                 SIGN IN
               </Nav.Link>
-            </Button>
-            <Button onClick={handleOpen} className={styles.button}>
-              <Nav.Link className={styles.NavLink} eventKey={2} href="#signup">
-                SIGN UP
-         </Nav.Link>
-            </Button>
+            </Button> */}
+            <SignUpForms/>      
+              <SignInForms/>         
           </Nav>
         </Navbar.Collapse>
       </Navbar>
 
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
-        <div style={modalStyle} className={classes.paper}>
-          <h2 id="simple-modal-title">Text in a modal</h2>
-          <p id="simple-modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
-        </div>
-      </Modal>
     </div>
   )
 

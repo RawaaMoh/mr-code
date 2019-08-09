@@ -30,6 +30,7 @@ function App() {
       </Container>
       <Footer links={socialLinks} />
     </Box>
+
   );
 }
 
