@@ -5,6 +5,7 @@ import Intro from './components/Intro';
 import Container from './components/Container';
 import Projects from './container/Projects';
 import Footer from './components/Footer';
+import Test from './components/Testing';
 
 import {
   firstName,
@@ -28,6 +29,7 @@ function App() {
         <Header name={fullName} links={links} />
         <Intro name={firstName} aboutLinkHref={links[1].href} />
         <Projects />
+        <Test/>
       </Container>
       <Footer links={socialLinks} />
     </Box>

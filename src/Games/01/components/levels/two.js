@@ -5,13 +5,13 @@ import 'brace/theme/github';
 import 'brace/mode/css';
 
 
-//change the ball color
+//change the paddle color
 
-const defaultCss = `.ball {
+const defaultCss = `.paddle {
     fill: green;
 }`
 
-const correctCss = `.ball {
+const correctCss = `.paddle {
     fill: blue;
 }`
 
