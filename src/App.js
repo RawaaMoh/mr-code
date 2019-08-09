@@ -19,6 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* import Page from './components/page'
+
+export default Page */}
     </div>
   );
 }
