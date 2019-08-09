@@ -24,27 +24,44 @@ export default function FormDialog() {
         Sign Up
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title">Sign Up Form</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
+            To sign up to this website, please fill the folowwing :
           </DialogContentText>
+
           <TextField
             autoFocus
             margin="dense"
             id="name"
+            label="Full Name"
+            type="text"
+            fullWidth
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="email"
             label="Email Address"
             type="email"
             fullWidth
           />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="password"
+            label="Enter your password"
+            type="password"
+            fullWidth
+          />
+
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
           <Button onClick={handleClose} color="primary">
-            Subscribe
+            Sign up
           </Button>
         </DialogActions>
       </Dialog>
