@@ -8,6 +8,7 @@
     "bootstrap": "^4.3.1",
     "bootstrap-4-react": "0.0.59",
     "brace": "^0.11.1",
+    "firebase": "^6.3.5",
     "firebaseui": "^4.1.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",

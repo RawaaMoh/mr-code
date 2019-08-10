@@ -6,9 +6,14 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import firebase from "./firebase";
+import { debuggerStatement } from '@babel/types';
+
 
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
+  const [email, setEmail] = React.useState();
+  const [password, setPassword] = React.useState();
 
   function handleClickOpen() {
     setOpen(true);
@@ -16,6 +21,23 @@ export default function FormDialog() {
 
   function handleClose() {
     setOpen(false);
+  }
+
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
+
+  function handlePasswordChange(e) {
+    setPassword(e.target.value);
+  }
+
+  function handleSubmit() {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
   }
 
   return (
@@ -27,7 +49,7 @@ export default function FormDialog() {
         <DialogTitle id="form-dialog-title">Sign Up Form</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To sign up to this website, please fill the folowwing :
+            Let's be friends.  
           </DialogContentText>
 
           <TextField
@@ -39,7 +61,9 @@ export default function FormDialog() {
             fullWidth
           />
           <TextField
+            onChange={handleEmailChange}
             autoFocus
+            value={email}
             margin="dense"
             id="email"
             label="Email Address"
@@ -47,7 +71,9 @@ export default function FormDialog() {
             fullWidth
           />
           <TextField
+            onChange={handlePasswordChange}
             autoFocus
+            value={password}
             margin="dense"
             id="password"
             label="Enter your password"
@@ -60,7 +86,7 @@ export default function FormDialog() {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleSubmit} color="primary">
             Sign up
           </Button>
         </DialogActions>

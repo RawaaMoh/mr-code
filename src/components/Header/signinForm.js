@@ -6,9 +6,15 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import firebase from "./firebase";
+import signupForm from "./signupForm";
 
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
+
+  var firebase = require('firebase');
+  var firebaseui = require('firebaseui');
+
 
   function handleClickOpen() {
     setOpen(true);
@@ -17,6 +23,22 @@ export default function FormDialog() {
   function handleClose() {
     setOpen(false);
   }
+
+  function handleSubmit() {
+    // firebase.auth().signInWithEmailAndPassword(signupForm.e.target.value.email, signupForm.e.get.value.password).catch(function (error) {
+    //   // Handle Errors here.
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   // ...
+    // });
+
+
+
+  }
+
+  const handleChange = name => event => {
+    setState({ ...state, [name]: event.target.value });
+  };
 
   return (
     <div>
@@ -36,6 +58,7 @@ export default function FormDialog() {
             label="Email Address"
             type="email"
             fullWidth
+            onChange={handleChange("email")}
           />
           <TextField
             autoFocus
@@ -44,13 +67,14 @@ export default function FormDialog() {
             label="Enter your password"
             type="password"
             fullWidth
+            onChange={handleChange("password")}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleSubmit} color="primary">
             Sign in
           </Button>
         </DialogActions>
