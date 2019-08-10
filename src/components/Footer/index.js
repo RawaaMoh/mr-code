@@ -13,6 +13,8 @@ import makbuleImage from '../../assets/makbule.jpg';
 import ruyaImage from '../../assets/ruya.jpg';
 import { SocialIcon } from 'react-social-icons';
 import styles from './index.module.scss';
+import { red, blue, orange,pink,lightpink } from '@material-ui/core/colors'
+
 
 const messages = [
   
@@ -38,6 +40,7 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     paddingBottom: 50,
+    backgroundColor : "lightpink",
   },
   list: {
     marginBottom: theme.spacing(2),

@@ -40,12 +40,16 @@ function App() {
                 <Projects />
                 {/* <LinkRouter /> */}
                 {/* <LevelOne/> */}
-
-                <Test />
             </Container>
+
             <Container>
+            <Test />
+            </Container>
+            
+            <Container id="games">
                 <Page />
             </Container>
+
             <Footer links={socialLinks} />
         </Box>
 
