@@ -5,8 +5,15 @@
     height: 50px;
 
 }
-.NavLink{
-    color: white;
+
+.Navbar{
+    background-color: rgb(236, 149, 178);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(125,30,125,0.83);
+-moz-box-shadow: 10px 10px 5px 0px rgba(125,30,125,0.83);
+box-shadow: 10px 10px 5px 0px rgba(125,30,125,0.83);
 }
 
 
+.styles{
+    background-color: aqua
+}
