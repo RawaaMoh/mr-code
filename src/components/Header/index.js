@@ -23,16 +23,6 @@ function Header({ name, links }) {
         <NavDropdown.Item href="#footer">ABOUT US</NavDropdown.Item>
       </NavDropdown>
     </Nav>
-    <Nav>
-      <Button className={styles.button}>
-      <Nav.Link className={styles.NavLink} href="#deets">SIGN IN</Nav.Link>
-      </Button>
-      <Button className={styles.button}>
-      <Nav.Link  className={styles.NavLink} eventKey={2} href="#memes">
-        SIGN UP
-      </Nav.Link>
-     </Button>
-     </Nav>
   </Navbar.Collapse>
 </Navbar>
 
