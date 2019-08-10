@@ -58,7 +58,7 @@ export default function FormDialog() {
             label="Email Address"
             type="email"
             fullWidth
-            onChange={handleChange("email")}
+            // onChange={handleChange("email")}
           />
           <TextField
             autoFocus
@@ -67,7 +67,7 @@ export default function FormDialog() {
             label="Enter your password"
             type="password"
             fullWidth
-            onChange={handleChange("password")}
+            // onChange={handleChange("password")}
           />
         </DialogContent>
         <DialogActions>
