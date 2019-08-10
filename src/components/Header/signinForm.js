@@ -12,8 +12,8 @@ import signupForm from "./signupForm";
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
 
-  var firebase = require('firebase');
-  var firebaseui = require('firebaseui');
+  // var firebase = require('firebase');
+  // var firebaseui = require('firebaseui');
 
 
   function handleClickOpen() {
@@ -36,9 +36,9 @@ export default function FormDialog() {
 
   }
 
-  const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.value });
-  };
+  // const handleChange = name => event => {
+  //   setState({ ...state, [name]: event.target.value });
+  // };
 
   return (
     <div>
