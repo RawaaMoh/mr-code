@@ -5,6 +5,7 @@ import Intro from './components/Intro';
 import Container from './components/Container';
 import Projects from './container/Projects';
 import Footer from './components/Footer';
+
 import {
   firstName,
   fullName,
@@ -29,6 +30,7 @@ function App() {
       </Container>
       <Footer links={socialLinks} />
     </Box>
+
   );
 }
 
