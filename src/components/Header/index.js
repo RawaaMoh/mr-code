@@ -52,25 +52,6 @@ function Header({ name, links }) {
 
 
   return (
-<<<<<<< HEAD
-    <Navbar id={Navbar} className={styles.Navbar} sticky="top" collapseOnSelect expand="lg" bg="blue" variant="blue" >
-  <Navbar.Brand href="#Navbar">MR CODE</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link  href="#lessons">LESSONS</Nav.Link>
-      <Nav.Link href="#games">GAMES</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#Navbar">MR CODE</NavDropdown.Item>
-        <NavDropdown.Item href="#lessons">LESSONS</NavDropdown.Item>
-        <NavDropdown.Item href="#games">GAMES</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#footer">ABOUT US</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
-=======
     <div>
       <Navbar style={{ backgroundColor: 'pink' }} sticky="top" collapseOnSelect expand="lg" bg="blue" variant="blue">
         <Navbar.Brand href="#home">MR CODE</Navbar.Brand>
@@ -88,7 +69,6 @@ function Header({ name, links }) {
             </NavDropdown>
           </Nav>
           <Nav>
->>>>>>> form
 
             {/* <Button onClick={handleOpen} className={styles.button}>
               <Nav.Link className={styles.NavLink} eventKey={1} href="#signin">
