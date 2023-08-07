@@ -10,7 +10,7 @@
     "brace": "^0.11.1",
     "firebase": "^6.3.5",
     "firebaseui": "^4.1.0",
-    "node-sass": "^7.0.0",
+    "node-sass": "^9.0.0",
     "react": "^16.8.6",
     "react-ace": "^7.0.2",
     "react-bootstrap": "^1.0.0-beta.10",
